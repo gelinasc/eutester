@@ -27,9 +27,7 @@
 # CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
-#
-# Author: Vic Iglesias vic.iglesias@eucalyptus.com
-#         
+
 
 try:
     from setuptools import setup
@@ -46,10 +44,7 @@ setup(name = "eutester",
       url = "http://open.eucalyptus.com",
       install_requires = ['paramiko >= 1.7','boto >= 2.5.2', 'jinja2 >= 2.7', 'argparse', 'futures', 'python-dateutil',
                           'mock', 'dnspython', 'pywinrm', 'BeautifulSoup', 'requests >= 1'],
-      packages = ["eutester","eucaops", "eucaweb", "testcases", "testcases.cloud_admin", "testcases.cloud_user",
-                  "testcases.cloud_user.instances", "testcases.cloud_user.s3",  "testcases.cloud_user.load",  
-                  "testcases.cloud_user.images", "testcases.cloud_user.images.eustore", "testcases.cloud_user.images.windows",
-                  "testcases.cloud_user.ebs","testcases.cloud_user.ebs.san_utils"],
+      packages = find_packages(),
       license = 'BSD (Simplified)',
       platforms = 'Posix; MacOS X; Windows',
       classifiers = [ 'Development Status :: 3 - Alpha',
