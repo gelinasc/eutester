@@ -318,7 +318,8 @@ class Install(EutesterTestCase):
             else:
                 public_ips = [public_ips]
 
-            network_config = {"InstanceDnsDomain": "eucalyptus.internal",
+            network_config = {"Mode": "EDGE",
+                              "InstanceDnsDomain": "eucalyptus.internal",
                               "InstanceDnsServers": [enabled_clc.hostname],
                               "PublicIps": public_ips,
                               "Subnets": [],
