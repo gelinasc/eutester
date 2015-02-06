@@ -293,6 +293,7 @@ class Install(EutesterTestCase):
             ### hypervisor's default network
             for node in self.tester.service_manager.get_all_node_controllers():
                 node.sys('virsh net-destroy default')
+                node.sys('virsh net-autostart --disable default')
 
             ### add private interface subnet on NC bridges
             ip_index = 2
